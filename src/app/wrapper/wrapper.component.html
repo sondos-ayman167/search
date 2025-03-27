@@ -1,0 +1,11 @@
+
+<div class="wrapper">
+ <app-form (todoAdded)="addTodo($event)"></app-form>
+
+ <h3>Tasks</h3>
+ <ul>
+   @for (todo of todos; track $index) {
+     <li>{{ todo }}</li>
+   }
+ </ul>
+</div>

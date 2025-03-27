@@ -1,0 +1,11 @@
+<div class="todo-list">
+    <h2>Tasks</h2>
+    <ul>
+      @for (todo of todos; track $index) {
+        <li [class.completed]="todo.completed">
+          <span (click)="markComplete($index)">{{ todo.text }}</span>
+          <button (click)="removeTask($index)">false</button>
+        </li>
+      }
+    </ul>
+  </div>
